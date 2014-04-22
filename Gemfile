@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 group :production do |variable|
-	gem 'pg'
-end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.0'
-# Use sqlite3 as the database for Active Record
+   gem 'rails', '4.1.0'
+   gem 'rails_12factor'
+   gem 'pg'
+end
 group :development do
 gem 'sqlite3'
 end
