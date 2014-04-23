@@ -1,5 +1,10 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  
+  #code added so Heroku will store Rails 4.0 images in the asset file
+  config.server_static_assets = true
+  config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
+  config.assets.compile = true
 
   # Code is not reloaded between requests.
   config.cache_classes = true
