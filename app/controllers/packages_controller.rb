@@ -1,4 +1,4 @@
-class PackagesController < ApplicationController
-  def index
-  end
-end
+#class PackagesController < ApplicationController
+  #def index
+ 
+

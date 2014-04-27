@@ -1,0 +1,22 @@
+<h1>Gallery#index</h1>
+<p>Find me in app/views/gallery/index.html.erb</p>
+
+[].each do |value|
+
+<hr/>
+
+<% ['moon-3-night-sky-1-jpg.jpg', ' ', ' '].each do |value| %>
+      each do |value| %>
+
+      #html - replace with #ruby autmomated line below
+      <img src="/assets/<%= value %>.jpg"/>
+      
+      #ruby automated line - avoids needing to reassociate during upgrades
+      <%= image_tag(value + '.jpg) %>   
+  <% end %>
+  </ul>
+
+
+  <style>
+       img {width:20%;  }
+  </style>
