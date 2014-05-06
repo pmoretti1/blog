@@ -1,22 +1,45 @@
-<h1>Gallery#index</h1>
+
+<h1>Gallery#Index</h1>
 <p>Find me in app/views/gallery/index.html.erb</p>
 
-[].each do |value|
+<html>
+<head>
+<title>Exploring HTML</title>
+<style>
+body  {background-color: #CCFF66;}
+h1 {font-family: Arial, sans-serif; font-size 32px; color: Blue;}
+h2 {font-family: Arial, sans-serif; font-size 32px; color: Blue;}
+p {font-family: Arial, sans-serif; font-size 14px; color: red;}
 
-<hr/>
+</style>
+</head>
+<body>
+  
+   
+<center><h1>The Long and Winding Road</h1></center>
+<h2>Where to begin?</h2>
+<p>The journey has been one filled with opportunity for tremendous opportunity</>
+<IMG SRC="ASSETS/IMAGES/car00707.jpg" ALT="Oops...where'd it go?" WIDTH=400 HEIGHT=400>
+<hr>
+<hr>
 
-<% ['moon-3-night-sky-1-jpg.jpg', ' ', ' '].each do |value| %>
-      each do |value| %>
 
-      #html - replace with #ruby autmomated line below
-      <img src="/assets/<%= value %>.jpg"/>
-      
-      #ruby automated line - avoids needing to reassociate during upgrades
-      <%= image_tag(value + '.jpg) %>   
-  <% end %>
-  </ul>
+<button id="color">Change color!</button>
+<script>
+document.getElementById('color').onclick = changeColor;
+var currentColor = "Blue";
 
+function changeColor() {
+    if(currentColor == "Blue"){
+    document.body.style.color = "red";
+    currentColor = "red";
+    } else {
+    document.body.style.color = "Blue";
+    currentColor = "Blue";
+    }
+  return currentColor;
+  }
+</script>
+</body>
+</html >
 
-  <style>
-       img {width:20%;  }
-  </style>

@@ -1,26 +1,28 @@
 Rails.application.routes.draw do
 
-  #root "welcome#index"
+  get 'admin/page_one'
 
-  get 'gallery/index', to: "gallery#index"
+  get 'admin/page_two'
 
-  get 'aboutme/index', to: "aboutme#index"
+# You can have the root of your site routed with "root"
+  root 'welcome#index'
 
-  get 'welcome/index', to: "welcome#index"
+  get 'gallery/index', to: "gallery#index", as: 'gallery'
 
-  get 'sitemap/index', to: "sitemap#index"
+  get 'aboutme/index', to: "aboutme#index",  as: 'aboutme'
 
-  get 'resume/index', to: "resume#index"
+  get 'welcome/index', to: "welcome#index", as: 'welcome'
 
-  get 'work/index', to: "work#index"
+  get 'sitemap/index', to: "sitemap#index", as: 'sitemap'
 
-  get 'news/index', to: "news#index"
+  get 'resume/index', to: "resume#index", as: 'resume'
+
+  get 'work/index', to: "work#index", as: 'work'
+
+  get 'news/index', to: "news#index", as: 'news'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
