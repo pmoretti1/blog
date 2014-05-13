@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :images
+
+  devise_for :users
   get 'admin/page_one'
 
   get 'admin/page_two'
@@ -7,19 +10,19 @@ Rails.application.routes.draw do
 # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  get 'gallery/index', to: "gallery#index", as: 'gallery'
+  get 'gallery', to: 'gallery#index', as: 'gallery'
 
-  get 'aboutme/index', to: "aboutme#index",  as: 'aboutme'
+  get 'aboutme', to: 'aboutme#index',  as: 'aboutme'
 
-  get 'welcome/index', to: "welcome#index", as: 'welcome'
+  get 'welcome', to: 'welcome#index', as: 'welcome'
 
-  get 'sitemap/index', to: "sitemap#index", as: 'sitemap'
+  get 'sitemap', to: 'sitemap#index', as: 'sitemap'
 
-  get 'resume/index', to: "resume#index", as: 'resume'
+  get 'resume', to: 'resume#index', as: 'resume'
 
-  get 'work/index', to: "work#index", as: 'work'
+  get 'work', to: 'work#index', as: 'work'
 
-  get 'news/index', to: "news#index", as: 'news'
+  get 'news', to: 'news#index', as: 'news'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

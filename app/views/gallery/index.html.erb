@@ -1,6 +1,6 @@
 
-<h1>Gallery#Index</h1>
-<p>Find me in app/views/gallery/index.html.erb</p>
+<!--<h1>Gallery</h1>-->
+<!--<p>Find me in app/views/gallery/index.html.erb</p>-->
 
 <html>
 <head>
@@ -10,7 +10,7 @@ body  {background-color: #CCFF66;}
 h1 {font-family: Arial, sans-serif; font-size 32px; color: Blue;}
 h2 {font-family: Arial, sans-serif; font-size 32px; color: Blue;}
 p {font-family: Arial, sans-serif; font-size 14px; color: red;}
-
+img {width: 20%;}
 </style>
 </head>
 <body>
@@ -19,9 +19,16 @@ p {font-family: Arial, sans-serif; font-size 14px; color: red;}
 <center><h1>The Long and Winding Road</h1></center>
 <h2>Where to begin?</h2>
 <p>The journey has been one filled with opportunity for tremendous opportunity</>
-<IMG SRC="ASSETS/IMAGES/car00707.jpg" ALT="Oops...where'd it go?" WIDTH=400 HEIGHT=400>
-<hr>
-<hr>
+
+
+<hr/>
+<hr/>
+
+<% @images.each do |image_record| %>
+<%= image_tag ( image_record.file_name ) %>
+<%= image_record.name %>
+<%= image_record.description %>
+<% end %>
 
 
 <button id="color">Change color!</button>

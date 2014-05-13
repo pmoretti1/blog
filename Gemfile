@@ -7,10 +7,14 @@ group :production do |variable|
    gem 'pg'
    gem 'sqlite3'
 
+
 end
 
 group :development do |variable|
-# Use SCSS for stylesheets
+# use devise gem
+   gem 'devise'
+
+ #Use SCSS for stylesheets
    gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
    gem 'uglifier', '>= 1.3.0'
